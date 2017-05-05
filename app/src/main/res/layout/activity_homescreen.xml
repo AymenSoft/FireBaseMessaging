@@ -11,15 +11,24 @@
         android:id="@+id/lv_messages"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:stackFromBottom="true"
+        android:dividerHeight="0dp"
+        android:divider="@null"
         android:layout_above="@+id/ll_messages" />
     <LinearLayout
         android:id="@+id/ll_messages"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:weightSum="4"
+        android:weightSum="5"
         android:layout_alignParentBottom="true">
 
+        <ImageButton
+            android:id="@+id/btn_image"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_camera"/>
         <EditText
             android:id="@+id/et_message"
             android:layout_width="0dp"

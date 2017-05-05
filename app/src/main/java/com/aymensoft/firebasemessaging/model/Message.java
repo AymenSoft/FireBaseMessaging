@@ -2,36 +2,36 @@ package com.aymensoft.firebasemessaging.model;
 
 public class Message {
 
+    private String userid;
     private String text;
-    private String name;
     private String photoUrl;
 
-    public Message(String text, String name, String photoUrl) {
+    public Message(String userid, String text, String photoUrl) {
+        this.userid = userid;
         this.text = text;
-        this.name = name;
         this.photoUrl = photoUrl;
     }
 
     public Message(){}
 
-    public String getText() {
-        return text;
+    public String getUserid() {
+        return userid;
     }
 
-    public String getName() {
-        return name;
+    public String getText() {
+        return text;
     }
 
     public String getPhotoUrl() {
         return photoUrl;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setUserid(String userid) {
+        this.userid = userid;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setText(String text) {
+        this.text = text;
     }
 
     public void setPhotoUrl(String photoUrl) {
@@ -41,8 +41,8 @@ public class Message {
     @Override
     public String toString() {
         return "Message{" +
-                "text='" + text + '\'' +
-                ", name='" + name + '\'' +
+                "userid='" + userid + '\'' +
+                ", text='" + text + '\'' +
                 ", photoUrl='" + photoUrl + '\'' +
                 '}';
     }
